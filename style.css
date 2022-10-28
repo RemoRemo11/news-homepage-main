@@ -1,0 +1,234 @@
+@font-face {
+    src: url(assets/fonts/Inter-VariableFont_slnt,wght.ttf);
+    font-family: Inter;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+	margin: 15px;
+	background-color: hsl(36, 100%, 99%);
+}
+
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    padding-bottom: 20px;
+}
+
+header ul {
+    display: none;
+}
+
+main section:not(:first-child) {
+    margin-top: 60px;
+    font-family: Inter;
+}
+
+@media (min-width: 768px) {
+    body {
+        width: 80%;
+        margin: 4em auto;
+    }
+
+    header h1 {
+        font-size: 4.5em;
+    }
+
+    header img {
+        display: none;
+    }
+
+    header ul {
+        display: flex;
+        list-style: none;
+        font-family: Inter;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        margin-left: 2.5em;
+        color: hsl(236, 13%, 42%);
+        transition: 0.2s;
+    }
+
+    header ul li a:hover {
+        color: hsl(35, 77%, 62%);
+    }
+
+    main section:not(:first-child) {
+        margin: 0;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+/* ----- the first section ----- */
+
+
+.web {
+    font-family: Inter;
+}
+
+.web img {
+    max-width: 100%;
+}
+
+.web h2 {
+	font-size: 2.55em;
+	margin-bottom: 15px;
+}
+
+.web p {
+	font-size: 15px;
+	color: hsl(236, 13%, 42%);
+	line-height: 1.6;
+}
+.web button {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	background-color: hsl(5, 85%, 63%);
+	border: none;
+	padding: 10px 30px;
+	color: white;
+	margin-top: 20px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.web button:hover {
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+
+}
+
+
+@media (min-width: 768px) {
+    .web {
+        grid-column: 1/3;
+        position: relative;
+    }
+    .web .content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .web h2 {
+        margin: 0;
+        flex-basis: 50%;
+        font-size: 3.6em;
+        line-height: 1;
+    }
+
+    .web button {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/* ---- the second section  ---- */
+
+
+.new {
+	background-color: hsl(240, 100%, 5%);
+	color: white;
+    padding: 25px;
+}
+
+.new h3 {
+	color: hsl(35, 77%, 62%);
+	font-size: 1.4em;
+	margin-bottom: 30px;
+}
+
+.new article {
+	margin-top: 30px;
+}
+
+.new article:not(:last-child) {
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.new article h4 {
+    transition: 0.2s;
+}
+.new article h4:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.new  article p{
+    margin: 10px 0 30px;
+    font-size: 15px;
+    color: hsl(233, 8%, 79%);
+    line-height: 1.8;
+}
+.new article:last-child p {
+    margin-bottom: 0;
+}
+
+@media (min-width: 767px) {
+    .new h3 {
+        font-size: 2em;
+    }
+}
+
+
+/* ----- the third section ----- */
+
+.feeds article {
+	display: flex;
+	gap: 20px;
+	margin-top: 40px;
+}
+
+.feeds article img{
+    width: 100px;
+}
+.feeds article .cont h5 {
+    color: hsl(233, 8%, 79%);
+	font-size: 2em;
+}
+
+.feeds article .cont span {
+	color: hsl(240, 100%, 5%);
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 10px 0;
+	display: block;
+    transition: 0.2s;
+}
+.feeds article .cont span:hover {
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+}
+.feeds article .cont p {
+	font-size: 15.2px;
+	line-height: 1.5;
+	color: hsl(236, 13%, 42%);
+}
+
+@media (min-width: 768px) {
+    .feeds {
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 10px;
+    }
+}
